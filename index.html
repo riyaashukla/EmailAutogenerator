@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Landing Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(90deg, #007BFF, #0056b3);
+            color: #fff;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        /* Hero Section Styling */
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 8%;
+    background: linear-gradient(135deg, #f9f9f9, #eef3f9);
+    border-radius: 12px;
+    gap: 2rem;
+}
+
+/* Left Text Content */
+.hero-text {
+    flex: 1 1 45%;
+    min-width: 300px;
+}
+.hero-text h2 {
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+.hero-text p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 500px;
+}
+
+/* Right Image Content */
+.hero-image {
+    flex: 1 1 45%;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hero-image img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text {
+        order: 2;
+    }
+    .hero-image {
+        order: 1;
+    }
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+}
+
+        section {
+            padding: 3rem 5%;
+            background-color: #fff;
+            margin-top: 1rem;
+            border-radius: 10px;
+        }
+        section h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #007BFF;
+        }
+        /* About Section */
+        #about p {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+        /* Features / Services */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .feature {
+            background: #f5f5f5;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .feature img {
+            background: #ddd;
+            width: 100%;
+            height: 150px;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+        }
+        /* Testimonials */
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .testimonial {
+            background: #f5f5f5;
+            padding: 1.5rem;
+            border-radius: 10px;
+            font-style: italic;
+        }
+        /* Signup */
+        .signup {
+            text-align: center;
+            padding: 2rem;
+            background: #007BFF;
+            color: #fff;
+            border-radius: 10px;
+        }
+        /* Contact */
+        .contact-form {
+            max-width: 500px;
+            margin: auto;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+        .contact-form button {
+            background: #007BFF;
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background: #0056b3;
+        }
+        /* Call to Action */
+        .cta {
+            background: linear-gradient(90deg, #007BFF, #0056b3);
+            color: white;
+            text-align: center;
+            padding: 3rem 5%;
+            border-radius: 10px;
+            margin-top: 1rem;
+        }
+        .cta h2 {
+            margin-bottom: 1rem;
+        }
+        .cta button {
+            background: white;
+            color: #007BFF;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .cta button:hover {
+            background: #f0f0f0;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>YourBrand</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#features">Services</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+        <a href="#signup">Sign Up</a>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<div class="hero">
+    <div class="hero-text">
+        <h2>Empowering Your Business with Modern Solutions</h2>
+        <p>We create stunning, user-friendly digital experiences that help brands connect with customers and grow faster than ever before.</p>
+    </div>
+    <div class="hero-image">
+   <img src="images/1.webp" alt="Service 1">
+    </div>
+</div>
+
+<!-- About Section -->
+<section id="about">
+    <h2>About Us</h2>
+    <p>At YourBrand, we believe in blending creativity, technology, and strategy to deliver results. With a team of dedicated professionals, we help businesses transform their online presence and achieve measurable success. Our goal is to provide you with solutions that are not only effective but also scalable for future growth.</p>
+</section>
+
+<!-- Services Section -->
+<section id="features">
+    <h2>Our Services</h2>
+    <div class="features">
+        <div class="feature">
+            <img src="images/2.png" alt="Service 1">
+            <h3>Web Design</h3>
+            <p>Clean, modern, and responsive designs tailored for your brand’s unique style.</p>
+        </div>
+        <div class="feature">
+            <img src="images/3.jpeg" alt="Service 2">
+            <h3>Digital Marketing</h3>
+            <p>Targeted strategies to reach the right audience and maximize engagement.</p>
+        </div>
+        <div class="feature">
+            <img src="images/4.jpg" alt="Service 3">
+            <h3>E-Commerce Solutions</h3>
+            <p>Seamless online shopping experiences that boost sales and customer loyalty.</p>
+        </div>
+        <div class="feature">
+            <img src="images/5.avif" alt="Service 4">
+            <h3>SEO Optimization</h3>
+            <p>Improve your visibility and rank higher in search engine results.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonials">
+        <div class="testimonial">
+            <p>"YourBrand transformed our website, and our traffic has doubled in just 3 months!"</p>
+            <strong>- Sarah J.</strong>
+        </div>
+        <div class="testimonial">
+            <p>"Professional, creative, and results-driven. Highly recommended!"</p>
+            <strong>- Mark P.</strong>
+        </div>
+        <div class="testimonial">
+            <p>"They truly understand our needs and deliver beyond expectations every time."</p>
+            <strong>- Lisa R.</strong>
+        </div>
+    </div>
+</section>
+
+<!-- Signup Section -->
+<section id="signup" class="signup">
+    <h2>Join Our Newsletter</h2>
+    <p>Stay updated with the latest news, tips, and offers from YourBrand.</p>
+    <!-- Klaviyo Signup Form -->
+    <div class="klaviyo-form-XYZ"></div>
+</section>
+
+<!-- Call to Action -->
+<div class="cta">
+    <h2>Ready to Take Your Business to the Next Level?</h2>
+    <button>Get Started Today</button>
+</div>
+
+<!-- Contact Section -->
+<section id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-form">
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea rows="5" placeholder="Your Message"></textarea>
+        <button>Send Message</button>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 YourBrand. All rights reserved.</p>
+</footer>
+
+<!-- Klaviyo Script -->
+<script async type='text/javascript' src='https://static.klaviyo.com/onsite/js/WMtCbt/klaviyo.js?company_id=WMtCbt'></script>
+<script type="text/javascript">
+// Initialize Klaviyo object on page load
+!function(){
+    if(!window.klaviyo){
+        window._klOnsite = window._klOnsite || [];
+        try{
+            window.klaviyo = new Proxy({}, {
+                get: function(n, i){
+                    return "push" === i ? function(){
+                        var n; (n = window._klOnsite).push.apply(n, arguments);
+                    } : function(){
+                        for(var n = arguments.length, o = new Array(n), w = 0; w < n; w++) o[w] = arguments[w];
+                        var t = "function" == typeof o[o.length-1] ? o.pop() : void 0,
+                            e = new Promise(function(n){
+                                window._klOnsite.push([i].concat(o, [function(i){ t && t(i), n(i) }]));
+                            });
+                        return e;
+                    }
+                }
+            })
+        } catch(n) {
+            window.klaviyo = window.klaviyo || [];
+            window.klaviyo.push = function(){
+                var n; (n = window._klOnsite).push.apply(n, arguments);
+            }
+        }
+    }
+}();
+</script>
+
+</body>
+</html>
